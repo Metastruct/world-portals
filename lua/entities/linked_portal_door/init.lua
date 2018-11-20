@@ -92,9 +92,7 @@ function ENT:Touch( ent )
 			
 			ent:ForcePlayerDrop()
 			
-			if self.TPHook then
-				self:TPHook(ent)
-			end
+			hook.Call("wp-teleport", GAMEMODE, self, ent)
 		end
 	end
 end
